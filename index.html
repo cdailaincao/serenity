@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Serenity</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>🌿 Serenity</h1>
+<p>Mental Health Wellness Platform</p>
+
+<form action="/save" method="post">
+
+    <h3>Mood</h3>
+    <select name="mood">
+        <option>Happy</option>
+        <option>Calm</option>
+        <option>Stressed</option>
+        <option>Sad</option>
+    </select>
+
+    <h3>Food Intake</h3>
+    <input type="text" name="food">
+
+    <h3>Water Intake (glasses)</h3>
+    <input type="number" name="water">
+
+    <h3>Sleep (hours)</h3>
+    <input type="number" step="0.5" name="sleep">
+
+    <br><br>
+    <button type="submit">Save</button>
+</form>
+
+<hr>
+
+<h2>Today's Summary</h2>
+<p>Mood: <span th:text="${data.mood}"></span></p>
+<p>Food: <span th:text="${data.food}"></span></p>
+<p>Water: <span th:text="${data.water}"></span> glasses</p>
+<p>Sleep: <span th:text="${data.sleep}"></span> hours</p>
+
+<h3>Optional Exercises</h3>
+<ul>
+    <li>Deep Breathing</li>
+    <li>Meditation</li>
+    <li>Stretching</li>
+    <li>Journaling</li>
+</ul>
+
+</body>
+</html>
